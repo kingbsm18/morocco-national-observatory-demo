@@ -1,33 +1,90 @@
-# morocco-national-observatory-demo
+# 🇲🇦 Observatoire National des Indicateurs Marocains
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+**Morocco National Observatory of Indicators**
 
-## Built with v0
+A public-facing data observatory designed to make Moroccan national statistics easier to explore, understand, and compare.
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+The platform brings together key indicators covering population, economy, education, health, employment, markets, justice, and society, with an emphasis on clear visualization, source transparency, and data integrity.
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_XskBMe4li6QgoVXTEtyi7NK5zpcL)
+## 🌐 Live Demo
 
-## Getting Started
+https://morocco-national-observatory-demo.vercel.app/
 
-First, run the development server:
+## 🎯 Project Objective
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The Observatory aims to provide citizens, journalists, researchers, and other users with an accessible interface for exploring Moroccan indicators.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Instead of presenting statistics as raw tables alone, the platform transforms them into:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Interactive charts
+- Key figures
+- Structured indicator pages
+- Historical trends
+- Dimension-based comparisons
+- Source and metadata information
 
-## Learn More
+The current version is a functional prototype and will progressively expand its data coverage and sources.
 
-To learn more, take a look at the following resources:
+## 📊 Current Coverage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+The current version contains **28 indicators**, covering areas including:
+
+- 👥 Population & Demography
+- 💰 Economy
+- 📈 Money & Markets
+- 🎓 Education & Culture
+- 🏥 Health
+- 💼 Employment
+- ⚖️ Justice & Society
+
+Each indicator is identified by its unique source identifier and linked to its corresponding data source.
+
+## 🗂️ Data Sources
+
+The current implementation primarily uses the **Haut-Commissariat au Plan (HCP) — Base de Données Statistiques (BDS)**.
+
+The architecture is designed to progressively support additional official Moroccan and international sources.
+
+Potential future sources include:
+
+- Haut-Commissariat au Plan (HCP)
+- Bank Al-Maghrib
+- Office des Changes
+- Ministère de l'Économie et des Finances
+- Moroccan ministries and public institutions
+- World Bank
+- IMF
+- UN agencies
+- Other recognized international statistical institutions
+
+Source information is preserved at indicator level whenever available.
+
+## 🏗️ Architecture
+
+The current application is built with:
+
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui**
+- **Vercel**
+
+The application uses the HCP BDS API for the current indicator dataset.
+
+### Data flow
+
+```text
+HCP BDS API
+     ↓
+Indicator ID
+     ↓
+Central Indicator Registry
+     ↓
+Data Validation
+     ↓
+Normalization
+     ↓
+Charts / Tables / Metadata
+     ↓
+Next.js Interface
