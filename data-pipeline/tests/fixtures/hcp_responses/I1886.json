@@ -1,0 +1,91 @@
+{
+  "code": "I1886",
+  "label": "Bilan de Bank Al-Maghrib (Actif)",
+  "periods": [
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ],
+  "dimensions": [
+    {
+      "id": "D1",
+      "label": "Milieu",
+      "modalites": [
+        {
+          "id": "MTOT",
+          "label": "Total",
+          "total": true
+        },
+        {
+          "id": "MURB",
+          "label": "Urbain",
+          "total": false
+        },
+        {
+          "id": "MRUR",
+          "label": "Rural",
+          "total": false
+        }
+      ]
+    }
+  ],
+  "data": {
+    "MTOT_2021": {
+      "value": "450000,0",
+      "footNote": null
+    },
+    "MURB_2021": {
+      "value": 450000.4,
+      "footNote": null
+    },
+    "MRUR_2021": {
+      "value": 449999.6,
+      "footNote": null
+    },
+    "MTOT_2022": {
+      "value": 454500.0,
+      "footNote": null
+    },
+    "MURB_2022": {
+      "value": 454500.4,
+      "footNote": null
+    },
+    "MRUR_2022": {
+      "value": 454499.6,
+      "footNote": null
+    },
+    "MTOT_2023": {
+      "value": 459000.0,
+      "footNote": null
+    },
+    "MURB_2023": {
+      "value": 459000.4,
+      "footNote": null
+    },
+    "MRUR_2023": {
+      "value": 458999.6,
+      "footNote": null
+    },
+    "MTOT_2024": {
+      "value": 463500.0,
+      "footNote": null
+    },
+    "MURB_2024": {
+      "value": 463500.4,
+      "footNote": null
+    },
+    "MRUR_2024": {
+      "value": 463499.6,
+      "footNote": null
+    }
+  },
+  "metaData": {
+    "unit": "En millions de DH",
+    "frequency": "AS",
+    "source": "Bank Al-Maghrib",
+    "definitionFr": "Définition de l'indicateur I1886.",
+    "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
+    "footNotesFr": null
+  }
+}

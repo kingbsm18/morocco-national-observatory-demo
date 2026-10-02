@@ -1,0 +1,91 @@
+{
+  "code": "I1493",
+  "label": "Taux de pauvreté",
+  "periods": [
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ],
+  "dimensions": [
+    {
+      "id": "D1",
+      "label": "Milieu",
+      "modalites": [
+        {
+          "id": "MTOT",
+          "label": "Total",
+          "total": true
+        },
+        {
+          "id": "MURB",
+          "label": "Urbain",
+          "total": false
+        },
+        {
+          "id": "MRUR",
+          "label": "Rural",
+          "total": false
+        }
+      ]
+    }
+  ],
+  "data": {
+    "MTOT_2021": {
+      "value": "4,8",
+      "footNote": null
+    },
+    "MURB_2021": {
+      "value": 5.2,
+      "footNote": null
+    },
+    "MRUR_2021": {
+      "value": 4.4,
+      "footNote": null
+    },
+    "MTOT_2022": {
+      "value": 4.85,
+      "footNote": null
+    },
+    "MURB_2022": {
+      "value": 5.25,
+      "footNote": null
+    },
+    "MRUR_2022": {
+      "value": 4.45,
+      "footNote": null
+    },
+    "MTOT_2023": {
+      "value": 4.9,
+      "footNote": null
+    },
+    "MURB_2023": {
+      "value": 5.3,
+      "footNote": null
+    },
+    "MRUR_2023": {
+      "value": 4.5,
+      "footNote": null
+    },
+    "MTOT_2024": {
+      "value": 4.94,
+      "footNote": null
+    },
+    "MURB_2024": {
+      "value": 5.34,
+      "footNote": null
+    },
+    "MRUR_2024": {
+      "value": 4.54,
+      "footNote": null
+    }
+  },
+  "metaData": {
+    "unit": "POURCENTAGE",
+    "frequency": "IR",
+    "source": "Carte de pauvreté monétaire 2014",
+    "definitionFr": "Définition de l'indicateur I1493.",
+    "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
+    "footNotesFr": null
+  }
+}

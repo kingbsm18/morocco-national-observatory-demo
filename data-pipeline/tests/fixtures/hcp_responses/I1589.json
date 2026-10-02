@@ -1,0 +1,91 @@
+{
+  "code": "I1589",
+  "label": "Taux d'accroissement (en %)",
+  "periods": [
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ],
+  "dimensions": [
+    {
+      "id": "D1",
+      "label": "Milieu",
+      "modalites": [
+        {
+          "id": "MTOT",
+          "label": "Total",
+          "total": true
+        },
+        {
+          "id": "MURB",
+          "label": "Urbain",
+          "total": false
+        },
+        {
+          "id": "MRUR",
+          "label": "Rural",
+          "total": false
+        }
+      ]
+    }
+  ],
+  "data": {
+    "MTOT_2021": {
+      "value": "1,1",
+      "footNote": null
+    },
+    "MURB_2021": {
+      "value": 1.5,
+      "footNote": null
+    },
+    "MRUR_2021": {
+      "value": 0.7,
+      "footNote": null
+    },
+    "MTOT_2022": {
+      "value": 1.11,
+      "footNote": null
+    },
+    "MURB_2022": {
+      "value": 1.51,
+      "footNote": null
+    },
+    "MRUR_2022": {
+      "value": 0.71,
+      "footNote": null
+    },
+    "MTOT_2023": {
+      "value": 1.12,
+      "footNote": null
+    },
+    "MURB_2023": {
+      "value": 1.52,
+      "footNote": null
+    },
+    "MRUR_2023": {
+      "value": 0.72,
+      "footNote": null
+    },
+    "MTOT_2024": {
+      "value": 1.13,
+      "footNote": null
+    },
+    "MURB_2024": {
+      "value": 1.53,
+      "footNote": null
+    },
+    "MRUR_2024": {
+      "value": 0.73,
+      "footNote": null
+    }
+  },
+  "metaData": {
+    "unit": "Pour cent",
+    "frequency": "AS",
+    "source": "HCP-CERED",
+    "definitionFr": "Définition de l'indicateur I1589.",
+    "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
+    "footNotesFr": null
+  }
+}

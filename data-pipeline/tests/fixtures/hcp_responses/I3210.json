@@ -1,0 +1,91 @@
+{
+  "code": "I3210",
+  "label": "Nombre des élèves dans l'enseignement primaire public",
+  "periods": [
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ],
+  "dimensions": [
+    {
+      "id": "D1",
+      "label": "Milieu",
+      "modalites": [
+        {
+          "id": "MTOT",
+          "label": "Total",
+          "total": true
+        },
+        {
+          "id": "MURB",
+          "label": "Urbain",
+          "total": false
+        },
+        {
+          "id": "MRUR",
+          "label": "Rural",
+          "total": false
+        }
+      ]
+    }
+  ],
+  "data": {
+    "MTOT_2021": {
+      "value": "3800000,0",
+      "footNote": null
+    },
+    "MURB_2021": {
+      "value": 3800000.4,
+      "footNote": null
+    },
+    "MRUR_2021": {
+      "value": 3799999.6,
+      "footNote": null
+    },
+    "MTOT_2022": {
+      "value": 3838000.0,
+      "footNote": null
+    },
+    "MURB_2022": {
+      "value": 3838000.4,
+      "footNote": null
+    },
+    "MRUR_2022": {
+      "value": 3837999.6,
+      "footNote": null
+    },
+    "MTOT_2023": {
+      "value": 3876000.0,
+      "footNote": null
+    },
+    "MURB_2023": {
+      "value": 3876000.4,
+      "footNote": null
+    },
+    "MRUR_2023": {
+      "value": 3875999.6,
+      "footNote": null
+    },
+    "MTOT_2024": {
+      "value": 3914000.0,
+      "footNote": null
+    },
+    "MURB_2024": {
+      "value": 3914000.4,
+      "footNote": null
+    },
+    "MRUR_2024": {
+      "value": 3913999.6,
+      "footNote": null
+    }
+  },
+  "metaData": {
+    "unit": "Nombre",
+    "frequency": "AS",
+    "source": "Ministère de l’Éducation nationale",
+    "definitionFr": "Définition de l'indicateur I3210.",
+    "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
+    "footNotesFr": null
+  }
+}
