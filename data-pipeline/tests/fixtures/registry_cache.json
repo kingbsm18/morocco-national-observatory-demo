@@ -1,0 +1,101 @@
+[
+  {
+    "id": "I1589",
+    "arabicTitle": "معدل النمو السكاني",
+    "frenchTitle": "Taux d'accroissement (en %)",
+    "description": "",
+    "domain": "test",
+    "unit": "Pour cent",
+    "frequency": "AS",
+    "source": "HCP-CERED",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1589"
+  },
+  {
+    "id": "I2790",
+    "arabicTitle": "معدل التمدن",
+    "frenchTitle": "Taux d'urbanisation",
+    "description": "",
+    "domain": "test",
+    "unit": "%",
+    "frequency": "IR",
+    "source": "Recensement général de la population et de l’habitat",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I2790"
+  },
+  {
+    "id": "I1493",
+    "arabicTitle": "معدل الفقر",
+    "frenchTitle": "Taux de pauvreté",
+    "description": "",
+    "domain": "test",
+    "unit": "POURCENTAGE",
+    "frequency": "IR",
+    "source": "Carte de pauvreté monétaire 2014",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1493"
+  },
+  {
+    "id": "I257",
+    "arabicTitle": "عدد المستشفيات",
+    "frenchTitle": "Nombre d'hôpitaux",
+    "description": "",
+    "domain": "test",
+    "unit": "NOMBRE",
+    "frequency": "AS",
+    "source": "Ministère de la Santé",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I257"
+  },
+  {
+    "id": "I3210",
+    "arabicTitle": "عدد تلاميذ التعليم الابتدائي العمومي",
+    "frenchTitle": "Nombre des élèves dans l'enseignement primaire public",
+    "description": "",
+    "domain": "test",
+    "unit": "Nombre",
+    "frequency": "AS",
+    "source": "Ministère de l’Éducation nationale",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I3210"
+  },
+  {
+    "id": "I4001",
+    "arabicTitle": "معدل البطالة حسب الوسط والجنس والفئة العمرية",
+    "frenchTitle": "Taux de chômage selon le Milieu, le sexe et le groupe d’âges",
+    "description": "",
+    "domain": "test",
+    "unit": "POURCENTAGE",
+    "frequency": "AS",
+    "source": "MAR_HCP Enquête nationale sur l’emploi",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I4001"
+  },
+  {
+    "id": "I4002",
+    "arabicTitle": "معدل البطالة حسب الوسط والشهادات",
+    "frenchTitle": "Taux de chômage selon le Milieu, les diplômes",
+    "description": "",
+    "domain": "test",
+    "unit": "POURCENTAGE",
+    "frequency": "AS",
+    "source": "MAR_HCP Enquête nationale sur l’emploi",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I4002"
+  },
+  {
+    "id": "I1887",
+    "arabicTitle": "القيمة السوقية للأسهم المغربية حسب القطاع الاقتصادي",
+    "frenchTitle": "Capitalisation boursière des valeurs marocaines par secteur d'activité économique",
+    "description": "",
+    "domain": "test",
+    "unit": "En millions de DH",
+    "frequency": "AS",
+    "source": "Bourse de Casablanca",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1887"
+  },
+  {
+    "id": "I1886",
+    "arabicTitle": "ميزانية بنك المغرب: الأصول",
+    "frenchTitle": "Bilan de Bank Al-Maghrib (Actif)",
+    "description": "",
+    "domain": "test",
+    "unit": "En millions de DH",
+    "frequency": "AS",
+    "source": "Bank Al-Maghrib",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1886"
+  }
+]

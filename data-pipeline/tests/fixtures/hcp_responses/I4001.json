@@ -1,0 +1,91 @@
+{
+  "code": "I4001",
+  "label": "Taux de chômage selon le Milieu, le sexe et le groupe d’âges",
+  "periods": [
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ],
+  "dimensions": [
+    {
+      "id": "D1",
+      "label": "Milieu",
+      "modalites": [
+        {
+          "id": "MTOT",
+          "label": "Total",
+          "total": true
+        },
+        {
+          "id": "MURB",
+          "label": "Urbain",
+          "total": false
+        },
+        {
+          "id": "MRUR",
+          "label": "Rural",
+          "total": false
+        }
+      ]
+    }
+  ],
+  "data": {
+    "MTOT_2021": {
+      "value": "13,2",
+      "footNote": null
+    },
+    "MURB_2021": {
+      "value": 13.6,
+      "footNote": null
+    },
+    "MRUR_2021": {
+      "value": 12.8,
+      "footNote": null
+    },
+    "MTOT_2022": {
+      "value": 13.33,
+      "footNote": null
+    },
+    "MURB_2022": {
+      "value": 13.73,
+      "footNote": null
+    },
+    "MRUR_2022": {
+      "value": 12.93,
+      "footNote": null
+    },
+    "MTOT_2023": {
+      "value": 13.46,
+      "footNote": null
+    },
+    "MURB_2023": {
+      "value": 13.86,
+      "footNote": null
+    },
+    "MRUR_2023": {
+      "value": 13.06,
+      "footNote": null
+    },
+    "MTOT_2024": {
+      "value": 13.6,
+      "footNote": null
+    },
+    "MURB_2024": {
+      "value": 14.0,
+      "footNote": null
+    },
+    "MRUR_2024": {
+      "value": 13.2,
+      "footNote": null
+    }
+  },
+  "metaData": {
+    "unit": "POURCENTAGE",
+    "frequency": "AS",
+    "source": "MAR_HCP Enquête nationale sur l’emploi",
+    "definitionFr": "Définition de l'indicateur I4001.",
+    "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
+    "footNotesFr": null
+  }
+}
