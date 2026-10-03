@@ -1,5 +1,4 @@
-import { HCP_BASE_URL, HCP_INDICATORS, type IndicatorDefinition } from './hcp-indicators'
-import { getCanonicalIndicator } from './observatory'
+import { HCP_BASE_URL, type IndicatorDefinition } from './hcp-indicators'
 
 export type HcpDimension = { id: string; label: string; modalities: { id: string; label: string; total: boolean }[] }
 export type HcpObservation = { period: string; value: number | null; dimensions: Record<string, string>; dimensionIds: Record<string, string>; footNote: unknown }
@@ -12,7 +11,8 @@ export type NormalizedIndicator = {
   observations: HcpObservation[]
 }
 export type IntegrityResult = { valid: boolean; reason?: string; metadataValid?: boolean; dataValid?: boolean }
-export type IndicatorData = { normalized: NormalizedIndicator | null; endpoint: string; responseCode?: string; responseLabel?: string; integrity: IntegrityResult; cacheKey?: string; error?: 'request' | 'parser' | 'integrity' }
+export type CanonicalDataStatus = 'available' | 'not-ingested' | 'database-unavailable' | 'validation-error'
+export type IndicatorData = { normalized: NormalizedIndicator | null; endpoint: string; responseCode?: string; responseLabel?: string; integrity: IntegrityResult; cacheKey?: string; error?: 'request' | 'parser' | 'integrity'; dataStatus: CanonicalDataStatus }
 export type IndicatorAuditRow = { id: string; apiCode?: string; apiLabel?: string; registryTitle: string; displayedTitle: string; status: 'VALID' | 'MISMATCH' | 'API_ERROR' | 'PARSER_ERROR' }
 
 export function validateIndicatorIntegrity(indicator: IndicatorDefinition, response: unknown): IntegrityResult {
@@ -63,19 +63,6 @@ export function normalizeHcpIndicator(response: unknown): NormalizedIndicator | 
   const periods = (Array.isArray(payload.periods) ? payload.periods : observations.map((item) => item.period)).map(clean).filter(Boolean).sort((a, b) => Number(a) - Number(b))
   const metadata = payload.metaData && typeof payload.metaData === 'object' ? payload.metaData : {}
   return { indicatorId: clean(payload.code), label: clean(payload.label), metadata: { unit: clean(metadata.unit), frequency: clean(metadata.frequency), source: clean(metadata.source), definition: clean(metadata.definitionFr), footnotes: metadata.footNotesFr ?? null, methodology: clean(metadata.methodOfCalculationFr) }, periods: Array.from(new Set(periods)), dimensions, observations }
-}
-
-export async function fetchIndicator(indicator: IndicatorDefinition): Promise<IndicatorData> {
-  return getCanonicalIndicator(indicator)
-}
-
-export async function auditAllIndicators(): Promise<IndicatorAuditRow[]> {
-  const rows = await Promise.all(HCP_INDICATORS.map(async (indicator) => {
-    const result = await fetchIndicator(indicator)
-    const status: IndicatorAuditRow['status'] = result.error === 'request' ? 'API_ERROR' : result.error === 'parser' ? 'PARSER_ERROR' : result.integrity.valid ? 'VALID' : 'MISMATCH'
-    return { id: indicator.id, apiCode: result.responseCode, apiLabel: result.responseLabel, registryTitle: indicator.frenchTitle, displayedTitle: indicator.arabicTitle, status }
-  }))
-  return rows
 }
 
 export function latestObservation(data: NormalizedIndicator) {

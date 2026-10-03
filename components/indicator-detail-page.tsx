@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import { getIndicator } from '@/lib/data/hcp-indicators'
-import { fetchIndicator, latestObservation } from '@/lib/data/hcp'
+import { latestObservation } from '@/lib/data/hcp'
+import { fetchCanonicalIndicator } from '@/lib/data/canonical-server'
 import IndicatorVisuals from '@/components/indicator-visuals'
 
 export default async function IndicatorDetailPage({ id }: { id: string }) {
   const debugIndicators = process.env.NEXT_PUBLIC_DEBUG_INDICATORS === 'true'
   const indicator = getIndicator(id)
   if (!indicator) return <main dir="rtl" className="detail-page"><div className="detail-shell"><Link className="back-link" href="/#indicators">← العودة إلى المؤشرات</Link><div className="empty-state"><p className="eyebrow">المرصد الوطني للمؤشرات</p><h1>المؤشر غير موجود</h1><p>لم يتم العثور على هذا المؤشر في قاعدة البيانات.</p></div></div></main>
-  const data = await fetchIndicator(indicator)
+  const data = await fetchCanonicalIndicator(indicator)
   if (!data.normalized) return <main dir="rtl" className="detail-page"><div className="detail-shell"><Link className="back-link" href="/#indicators">← العودة إلى المؤشرات</Link><div className="empty-state"><p className="eyebrow">{data.error === 'integrity' ? 'سلامة البيانات' : 'مصدر البيانات'}</p><h1>{data.error === 'integrity' ? 'خطأ في مطابقة البيانات' : 'تعذر الوصول إلى مصدر البيانات'}</h1><p>{data.error === 'integrity' ? 'تعذر التأكد من أن البيانات تخص هذا المؤشر.' : data.endpoint}</p>{debugIndicators && <pre className="debug-panel">{JSON.stringify({ requestedId: indicator.id, apiUrl: data.endpoint, responseCode: data.responseCode, apiLabel: data.responseLabel, registryArabicTitle: indicator.arabicTitle, registryFrenchTitle: indicator.frenchTitle, displayedArabicTitle: indicator.arabicTitle, metadataIntegrity: data.integrity.metadataValid ? 'VALID' : 'MISMATCH', dataIntegrity: data.integrity.dataValid ? 'VALID' : data.integrity.reason, cacheKey: data.cacheKey || `indicator-data-${indicator.id}`, routeId: id, integrity: data.integrity.valid ? 'VALID' : data.integrity.reason }, null, 2)}</pre>}</div></div></main>
   const normalized = data.normalized
   const rows = normalized.observations.filter((row) => row.value !== null).sort((a, b) => Number(a.period) - Number(b.period))
