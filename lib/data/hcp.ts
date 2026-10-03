@@ -1,4 +1,5 @@
 import { HCP_BASE_URL, HCP_INDICATORS, type IndicatorDefinition } from './hcp-indicators'
+import { getCanonicalIndicator } from './observatory'
 
 export type HcpDimension = { id: string; label: string; modalities: { id: string; label: string; total: boolean }[] }
 export type HcpObservation = { period: string; value: number | null; dimensions: Record<string, string>; dimensionIds: Record<string, string>; footNote: unknown }
@@ -65,20 +66,7 @@ export function normalizeHcpIndicator(response: unknown): NormalizedIndicator | 
 }
 
 export async function fetchIndicator(indicator: IndicatorDefinition): Promise<IndicatorData> {
-  const endpoint = `${base}/${encodeURIComponent(indicator.id)}`
-  const cacheKey = `indicator-data-${indicator.id}`
-  if (indicator.apiUrl !== endpoint) return { normalized: null, endpoint, cacheKey, integrity: { valid: false, reason: 'registry-endpoint-mismatch' }, error: 'integrity' }
-  try {
-    const response = await fetch(endpoint, { next: { revalidate: 3600, tags: [`hcp-indicator-${indicator.id}`] } })
-    if (!response.ok) return { normalized: null, endpoint, integrity: { valid: false, reason: `http-${response.status}` }, error: 'request' }
-    const payload = await response.json()
-    const integrity = validateIndicatorIntegrity(indicator, payload)
-    const responseCode = clean(payload?.code)
-    const responseLabel = clean(payload?.label)
-    if (!integrity.valid) return { normalized: null, endpoint, responseCode, responseLabel, integrity, error: 'integrity' }
-    const normalized = normalizeHcpIndicator(payload)
-    return normalized ? { normalized, endpoint, responseCode, responseLabel, integrity } : { normalized: null, endpoint, responseCode, responseLabel, integrity: { valid: false, reason: 'parser' }, error: 'parser' }
-  } catch { return { normalized: null, endpoint, integrity: { valid: false, reason: 'request-failed' }, error: 'request' } }
+  return getCanonicalIndicator(indicator)
 }
 
 export async function auditAllIndicators(): Promise<IndicatorAuditRow[]> {
