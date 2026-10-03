@@ -1,6 +1,6 @@
 {
-  "code": "I3210",
-  "label": "Nombre des élèves dans l'enseignement primaire public",
+  "code": "I2090",
+  "label": "Importations par principaux fournisseurs",
   "periods": [
     "2021",
     "2022",
@@ -32,59 +32,59 @@
   ],
   "data": {
     "MTOT_2021": {
-      "value": "2212,15",
+      "value": "421,92",
       "footNote": null
     },
     "MURB_2021": {
-      "value": 2256.39,
+      "value": 430.36,
       "footNote": null
     },
     "MRUR_2021": {
-      "value": 2167.91,
+      "value": 413.48,
       "footNote": null
     },
     "MTOT_2022": {
-      "value": 2234.27,
+      "value": 426.14,
       "footNote": null
     },
     "MURB_2022": {
-      "value": 2278.51,
+      "value": 434.58,
       "footNote": null
     },
     "MRUR_2022": {
-      "value": 2190.03,
+      "value": 417.7,
       "footNote": null
     },
     "MTOT_2023": {
-      "value": 2256.39,
+      "value": 430.36,
       "footNote": null
     },
     "MURB_2023": {
-      "value": 2300.64,
+      "value": 438.8,
       "footNote": null
     },
     "MRUR_2023": {
-      "value": 2212.15,
+      "value": 421.92,
       "footNote": null
     },
     "MTOT_2024": {
-      "value": 2278.51,
+      "value": 434.58,
       "footNote": null
     },
     "MURB_2024": {
-      "value": 2322.76,
+      "value": 443.02,
       "footNote": null
     },
     "MRUR_2024": {
-      "value": 2234.27,
+      "value": 426.14,
       "footNote": null
     }
   },
   "metaData": {
-    "unit": "Nombre",
+    "unit": "en millions de DH",
     "frequency": "AS",
-    "source": "Ministère de l’Éducation nationale",
-    "definitionFr": "Définition de l'indicateur I3210.",
+    "source": "Office des changes",
+    "definitionFr": "Définition de l'indicateur I2090.",
     "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
     "footNotesFr": null
   }

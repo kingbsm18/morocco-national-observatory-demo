@@ -29,12 +29,30 @@ logger = logging.getLogger(__name__)
 @dataclass
 class IndicatorRunReport:
     indicator_id: str
+    title: str
     http_status: int
     checksum: str
     records_parsed: int
     validation_counts: Dict[str, int]
     canonical_inserted: int
     status: str  # 'success' | 'skipped_unchanged' | 'blocked_error' | 'fetch_failed'
+    overall_status: str = ""  # 'SUCCESS' | 'WARNING' | 'ERROR' -- set by _finalize()
+
+    def __post_init__(self) -> None:
+        if not self.overall_status:
+            self.overall_status = _overall_status(self.status, self.validation_counts)
+
+
+def _overall_status(status: str, validation_counts: Dict[str, int]) -> str:
+    """Single tri-state verdict per indicator, on top of the more granular
+    `status` string: ERROR if the run was blocked or the fetch failed;
+    WARNING if it succeeded but validation raised a WARNING; SUCCESS
+    otherwise (including a clean 'unchanged payload, nothing to do')."""
+    if status in ("blocked_error", "fetch_failed"):
+        return "ERROR"
+    if validation_counts.get("WARNING", 0) > 0:
+        return "WARNING"
+    return "SUCCESS"
 
 
 def ingest_indicator(
@@ -46,6 +64,7 @@ def ingest_indicator(
         repository.record_fetch_failure(session, run, indicator, fetch_result)
         return IndicatorRunReport(
             indicator_id=indicator.id,
+            title=indicator.frenchTitle,
             http_status=fetch_result.http_status,
             checksum="",
             records_parsed=0,
@@ -68,6 +87,7 @@ def ingest_indicator(
         )
         return IndicatorRunReport(
             indicator_id=indicator.id,
+            title=indicator.frenchTitle,
             http_status=fetch_result.http_status,
             checksum=fetch_result.checksum,
             records_parsed=0,
@@ -93,6 +113,7 @@ def ingest_indicator(
     if counts.get("ERROR", 0) > 0:
         return IndicatorRunReport(
             indicator_id=indicator.id,
+            title=indicator.frenchTitle,
             http_status=fetch_result.http_status,
             checksum=fetch_result.checksum,
             records_parsed=records_parsed,
@@ -108,6 +129,7 @@ def ingest_indicator(
     )
     return IndicatorRunReport(
         indicator_id=indicator.id,
+        title=indicator.frenchTitle,
         http_status=fetch_result.http_status,
         checksum=fetch_result.checksum,
         records_parsed=records_parsed,
@@ -117,19 +139,43 @@ def ingest_indicator(
     )
 
 
+@dataclass
+class RunSummary:
+    total_requested: int
+    successful: int   # overall_status == SUCCESS
+    warnings: int      # overall_status == WARNING
+    errors: int        # overall_status == ERROR
+    raw_objects_written: int       # one per indicator attempted, always -- nothing is ever skipped silently
+    canonical_observations_written: int
+
+    @classmethod
+    def from_reports(cls, reports: List["IndicatorRunReport"]) -> "RunSummary":
+        return cls(
+            total_requested=len(reports),
+            successful=sum(1 for r in reports if r.overall_status == "SUCCESS"),
+            warnings=sum(1 for r in reports if r.overall_status == "WARNING"),
+            errors=sum(1 for r in reports if r.overall_status == "ERROR"),
+            raw_objects_written=len(reports),
+            canonical_observations_written=sum(r.canonical_inserted for r in reports),
+        )
+
+
 def run_ingestion(
     session: Session,
     indicators: List[IndicatorDefinition],
     trigger: str = "manual",
 ) -> List[IndicatorRunReport]:
+    """Ingests every indicator passed in, one at a time. Every single one gets
+    a report appended -- there is no code path in this loop that moves to the
+    next indicator without first producing a report for the current one, so
+    nothing is ever silently skipped."""
     run = repository.start_ingestion_run(session, trigger=trigger, indicator_count=len(indicators))
     reports: List[IndicatorRunReport] = []
-    any_error = False
     for indicator in indicators:
         repository.ensure_indicator_row(session, indicator)
         report = ingest_indicator(session, run, indicator)
         reports.append(report)
-        if report.status in ("blocked_error", "fetch_failed"):
-            any_error = True
+    any_error = any(r.overall_status == "ERROR" for r in reports)
     repository.finish_ingestion_run(session, run, status="partial" if any_error else "success")
+    assert len(reports) == len(indicators), "every requested indicator must produce exactly one report"
     return reports

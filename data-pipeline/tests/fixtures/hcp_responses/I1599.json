@@ -1,6 +1,6 @@
 {
-  "code": "I3210",
-  "label": "Nombre des élèves dans l'enseignement primaire public",
+  "code": "I1599",
+  "label": "Taux brut de natalité",
   "periods": [
     "2021",
     "2022",
@@ -32,59 +32,59 @@
   ],
   "data": {
     "MTOT_2021": {
-      "value": "2212,15",
+      "value": "2067,47",
       "footNote": null
     },
     "MURB_2021": {
-      "value": 2256.39,
+      "value": 2108.82,
       "footNote": null
     },
     "MRUR_2021": {
-      "value": 2167.91,
+      "value": 2026.12,
       "footNote": null
     },
     "MTOT_2022": {
-      "value": 2234.27,
+      "value": 2088.14,
       "footNote": null
     },
     "MURB_2022": {
-      "value": 2278.51,
+      "value": 2129.49,
       "footNote": null
     },
     "MRUR_2022": {
-      "value": 2190.03,
+      "value": 2046.8,
       "footNote": null
     },
     "MTOT_2023": {
-      "value": 2256.39,
+      "value": 2108.82,
       "footNote": null
     },
     "MURB_2023": {
-      "value": 2300.64,
+      "value": 2150.17,
       "footNote": null
     },
     "MRUR_2023": {
-      "value": 2212.15,
+      "value": 2067.47,
       "footNote": null
     },
     "MTOT_2024": {
-      "value": 2278.51,
+      "value": 2129.49,
       "footNote": null
     },
     "MURB_2024": {
-      "value": 2322.76,
+      "value": 2170.84,
       "footNote": null
     },
     "MRUR_2024": {
-      "value": 2234.27,
+      "value": 2088.14,
       "footNote": null
     }
   },
   "metaData": {
-    "unit": "Nombre",
-    "frequency": "AS",
-    "source": "Ministère de l’Éducation nationale",
-    "definitionFr": "Définition de l'indicateur I3210.",
+    "unit": "Pour mille",
+    "frequency": "AI",
+    "source": "HCP-CERED",
+    "definitionFr": "Définition de l'indicateur I1599.",
     "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
     "footNotesFr": null
   }

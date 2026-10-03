@@ -1,6 +1,6 @@
 {
-  "code": "I3210",
-  "label": "Nombre des élèves dans l'enseignement primaire public",
+  "code": "I4217",
+  "label": "Population Pénale",
   "periods": [
     "2021",
     "2022",
@@ -32,59 +32,59 @@
   ],
   "data": {
     "MTOT_2021": {
-      "value": "2212,15",
+      "value": "2366,31",
       "footNote": null
     },
     "MURB_2021": {
-      "value": 2256.39,
+      "value": 2413.64,
       "footNote": null
     },
     "MRUR_2021": {
-      "value": 2167.91,
+      "value": 2318.98,
       "footNote": null
     },
     "MTOT_2022": {
-      "value": 2234.27,
+      "value": 2389.97,
       "footNote": null
     },
     "MURB_2022": {
-      "value": 2278.51,
+      "value": 2437.3,
       "footNote": null
     },
     "MRUR_2022": {
-      "value": 2190.03,
+      "value": 2342.65,
       "footNote": null
     },
     "MTOT_2023": {
-      "value": 2256.39,
+      "value": 2413.64,
       "footNote": null
     },
     "MURB_2023": {
-      "value": 2300.64,
+      "value": 2460.96,
       "footNote": null
     },
     "MRUR_2023": {
-      "value": 2212.15,
+      "value": 2366.31,
       "footNote": null
     },
     "MTOT_2024": {
-      "value": 2278.51,
+      "value": 2437.3,
       "footNote": null
     },
     "MURB_2024": {
-      "value": 2322.76,
+      "value": 2484.63,
       "footNote": null
     },
     "MRUR_2024": {
-      "value": 2234.27,
+      "value": 2389.97,
       "footNote": null
     }
   },
   "metaData": {
-    "unit": "Nombre",
+    "unit": "NOMBRE",
     "frequency": "AS",
-    "source": "Ministère de l’Éducation nationale",
-    "definitionFr": "Définition de l'indicateur I3210.",
+    "source": "Délégation Générale de l’Administration Pénitentiaire",
+    "definitionFr": "Définition de l'indicateur I4217.",
     "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
     "footNotesFr": null
   }

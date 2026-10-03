@@ -25,11 +25,28 @@ alembic upgrade head
 ## Running ingestion
 
 ```bash
-# all indicators, reading the registry live from the running Next.js app
+# all indicators currently in the registry (28, as of this writing) --
+# resolved dynamically, never a hardcoded list in this package
 python -m data_pipeline ingest --all
 
 # specific indicators
 python -m data_pipeline ingest --indicator I1589 --indicator I2790
+```
+
+`--all` always reflects whatever the registry currently contains. If the
+registry grows to 29 indicators tomorrow, `--all` ingests 29 -- there is no
+count baked into `cli.py` or `ingestion/run.py` anywhere.
+
+### Offline demo (no network access to bds.hcp.ma)
+
+`scripts/offline_demo.py` runs the real `--all` pipeline end-to-end against
+the committed synthetic fixtures, swapping out only the network fetch. Useful
+for CI or a sandboxed dev environment; **never use it for a real ingestion
+run** -- the moment you have network access to HCP, use the plain command
+above instead.
+
+```bash
+DATABASE_URL=sqlite:////tmp/demo.db python scripts/offline_demo.py
 ```
 
 `REGISTRY_URL` defaults to `http://localhost:3000/api/registry`. In
@@ -52,8 +69,11 @@ written in has no network path to `bds.hcp.ma`, so they were built to match
 the exact response shape the existing `normalizeHcpIndicator` /
 `validateIndicatorIntegrity` logic expects (same `code`/`label`/`metaData`/
 `dimensions`/`data` structure, same `modalityId_period` key format), using
-the real titles/units/sources from the registry for the 9 agreed test
-indicators.
+the real titles/units/sources from the registry for all 28 indicators (the
+original 9 — I1589, I2790, I1493, I257, I3210, I4001, I4002, I1887, I1886 —
+remain the dedicated regression/parser fixture set from Phase 1's first
+pass; the other 19 were added when the pipeline was extended to the full
+registry).
 
 They're enough to prove the parser, validation engine, and the
 cross-contamination regression test behave correctly. They are **not** a

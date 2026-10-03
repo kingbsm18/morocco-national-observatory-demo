@@ -1,5 +1,16 @@
 [
   {
+    "id": "I1587",
+    "arabicTitle": "توقعات سكان الجهات حسب الوسط 2014–2030",
+    "frenchTitle": "Projections de la population des régions par milieu 2014 à 2030",
+    "description": "",
+    "domain": "test",
+    "unit": "Nombre",
+    "frequency": "AS",
+    "source": "HCP-CERED",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1587"
+  },
+  {
     "id": "I1589",
     "arabicTitle": "معدل النمو السكاني",
     "frenchTitle": "Taux d'accroissement (en %)",
@@ -9,6 +20,50 @@
     "frequency": "AS",
     "source": "HCP-CERED",
     "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1589"
+  },
+  {
+    "id": "I1590",
+    "arabicTitle": "السكان حسب الفئة العمرية والجنس والوسط",
+    "frenchTitle": "Population  par groupe d’âge , sexe et le milieu (en milliers et au milieu de l’année) : 1960-2050",
+    "description": "",
+    "domain": "test",
+    "unit": "En milliers",
+    "frequency": "AS",
+    "source": "HCP-CERED",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1590"
+  },
+  {
+    "id": "I1594",
+    "arabicTitle": "السكان في سن النشاط",
+    "frenchTitle": "Population en âge d'activité",
+    "description": "",
+    "domain": "test",
+    "unit": "En milliers",
+    "frequency": "AS",
+    "source": "HCP-CERED",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1594"
+  },
+  {
+    "id": "I1599",
+    "arabicTitle": "معدل الولادات الخام",
+    "frenchTitle": "Taux brut de natalité",
+    "description": "",
+    "domain": "test",
+    "unit": "Pour mille",
+    "frequency": "AI",
+    "source": "HCP-CERED",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1599"
+  },
+  {
+    "id": "I1600",
+    "arabicTitle": "معدل الوفيات الخام",
+    "frenchTitle": "Taux brut de mortalité",
+    "description": "",
+    "domain": "test",
+    "unit": "Pour mille",
+    "frequency": "AI",
+    "source": "HCP-CERED",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1600"
   },
   {
     "id": "I2790",
@@ -22,59 +77,37 @@
     "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I2790"
   },
   {
-    "id": "I1493",
-    "arabicTitle": "معدل الفقر",
-    "frenchTitle": "Taux de pauvreté",
-    "description": "",
-    "domain": "test",
-    "unit": "POURCENTAGE",
-    "frequency": "IR",
-    "source": "Carte de pauvreté monétaire 2014",
-    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1493"
-  },
-  {
-    "id": "I257",
-    "arabicTitle": "عدد المستشفيات",
-    "frenchTitle": "Nombre d'hôpitaux",
-    "description": "",
-    "domain": "test",
-    "unit": "NOMBRE",
-    "frequency": "AS",
-    "source": "Ministère de la Santé",
-    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I257"
-  },
-  {
-    "id": "I3210",
-    "arabicTitle": "عدد تلاميذ التعليم الابتدائي العمومي",
-    "frenchTitle": "Nombre des élèves dans l'enseignement primaire public",
+    "id": "I1481",
+    "arabicTitle": "السكان حسب الفئات العمرية والجنس",
+    "frenchTitle": "Population selon les groupes d'âge et le sexe",
     "description": "",
     "domain": "test",
     "unit": "Nombre",
     "frequency": "AS",
-    "source": "Ministère de l’Éducation nationale",
-    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I3210"
+    "source": "Haut Commissariat au Plan",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1481"
   },
   {
-    "id": "I4001",
-    "arabicTitle": "معدل البطالة حسب الوسط والجنس والفئة العمرية",
-    "frenchTitle": "Taux de chômage selon le Milieu, le sexe et le groupe d’âges",
+    "id": "I2090",
+    "arabicTitle": "الواردات حسب الموردين الرئيسيين",
+    "frenchTitle": "Importations par principaux fournisseurs",
     "description": "",
     "domain": "test",
-    "unit": "POURCENTAGE",
+    "unit": "en millions de DH",
     "frequency": "AS",
-    "source": "MAR_HCP Enquête nationale sur l’emploi",
-    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I4001"
+    "source": "Office des changes",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I2090"
   },
   {
-    "id": "I4002",
-    "arabicTitle": "معدل البطالة حسب الوسط والشهادات",
-    "frenchTitle": "Taux de chômage selon le Milieu, les diplômes",
+    "id": "I2084",
+    "arabicTitle": "الصادرات حسب الزبائن الرئيسيين",
+    "frenchTitle": "Exportations par principaux clients",
     "description": "",
     "domain": "test",
-    "unit": "POURCENTAGE",
+    "unit": "en millions de DH",
     "frequency": "AS",
-    "source": "MAR_HCP Enquête nationale sur l’emploi",
-    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I4002"
+    "source": "Office des changes",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I2084"
   },
   {
     "id": "I1887",
@@ -97,5 +130,181 @@
     "frequency": "AS",
     "source": "Bank Al-Maghrib",
     "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1886"
+  },
+  {
+    "id": "I1889",
+    "arabicTitle": "ميزانية بنك المغرب: الخصوم",
+    "frenchTitle": "Bilan de Bank Al-Maghrib (Passif)",
+    "description": "",
+    "domain": "test",
+    "unit": "En millions de DH",
+    "frequency": "AS",
+    "source": "Bank Al-Maghrib",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1889"
+  },
+  {
+    "id": "I3328",
+    "arabicTitle": "رقم المعاملات",
+    "frenchTitle": "Chiffre d'affaires",
+    "description": "",
+    "domain": "test",
+    "unit": "En millions de DH",
+    "frequency": "AS",
+    "source": "Ministère de l’Industrie et du Commerce",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I3328"
+  },
+  {
+    "id": "I3331",
+    "arabicTitle": "الصادرات",
+    "frenchTitle": "Exportation",
+    "description": "",
+    "domain": "test",
+    "unit": "En millions de DH",
+    "frequency": "AS",
+    "source": "Ministère de l’Industrie et du Commerce",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I3331"
+  },
+  {
+    "id": "I4217",
+    "arabicTitle": "عدد السجناء",
+    "frenchTitle": "Population Pénale",
+    "description": "",
+    "domain": "test",
+    "unit": "NOMBRE",
+    "frequency": "AS",
+    "source": "Délégation Générale de l’Administration Pénitentiaire",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I4217"
+  },
+  {
+    "id": "I1493",
+    "arabicTitle": "معدل الفقر",
+    "frenchTitle": "Taux de pauvreté",
+    "description": "",
+    "domain": "test",
+    "unit": "POURCENTAGE",
+    "frequency": "IR",
+    "source": "Carte de pauvreté monétaire 2014",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1493"
+  },
+  {
+    "id": "I3242",
+    "arabicTitle": "عدم المساواة في مستوى المعيشة: معامل جيني",
+    "frenchTitle": "Inégalité de vie : coefficient de Gini",
+    "description": "",
+    "domain": "test",
+    "unit": "%",
+    "frequency": "IR",
+    "source": "HCP",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I3242"
+  },
+  {
+    "id": "I257",
+    "arabicTitle": "عدد المستشفيات",
+    "frenchTitle": "Nombre d'hôpitaux",
+    "description": "",
+    "domain": "test",
+    "unit": "NOMBRE",
+    "frequency": "AS",
+    "source": "Ministère de la Santé",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I257"
+  },
+  {
+    "id": "I259",
+    "arabicTitle": "الطاقة الاستيعابية للأسرة",
+    "frenchTitle": "Capacité litière existante",
+    "description": "",
+    "domain": "test",
+    "unit": "Nombre",
+    "frequency": "AS",
+    "source": "Ministère de la Santé et de la Protection sociale",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I259"
+  },
+  {
+    "id": "I238",
+    "arabicTitle": "عدد المراكز الصحية",
+    "frenchTitle": "Nombre de centres de santé",
+    "description": "",
+    "domain": "test",
+    "unit": "NOMBRE",
+    "frequency": "AS",
+    "source": "Ministère de la Santé et de la Protection sociale",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I238"
+  },
+  {
+    "id": "I3210",
+    "arabicTitle": "عدد تلاميذ التعليم الابتدائي العمومي",
+    "frenchTitle": "Nombre des élèves dans l'enseignement primaire public",
+    "description": "",
+    "domain": "test",
+    "unit": "Nombre",
+    "frequency": "AS",
+    "source": "Ministère de l’Éducation nationale",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I3210"
+  },
+  {
+    "id": "I1762",
+    "arabicTitle": "هيئة التدريس بالتعليم الابتدائي العمومي",
+    "frenchTitle": "Personnel enseignant de l'enseignement primaire public",
+    "description": "",
+    "domain": "test",
+    "unit": "NOMBRE",
+    "frequency": "AS",
+    "source": "Ministère de l’Éducation nationale",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1762"
+  },
+  {
+    "id": "I1821",
+    "arabicTitle": "ميزانية التعليم الوطني",
+    "frenchTitle": "Budget de l'éducation nationale (en millions de dh)",
+    "description": "",
+    "domain": "test",
+    "unit": "Millions de dh",
+    "frequency": "AS",
+    "source": "Ministère de l’Enseignement supérieur",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I1821"
+  },
+  {
+    "id": "I4002",
+    "arabicTitle": "معدل البطالة حسب الوسط والشهادات",
+    "frenchTitle": "Taux de chômage selon le Milieu, les diplômes",
+    "description": "",
+    "domain": "test",
+    "unit": "POURCENTAGE",
+    "frequency": "AS",
+    "source": "MAR_HCP Enquête nationale sur l’emploi",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I4002"
+  },
+  {
+    "id": "I4001",
+    "arabicTitle": "معدل البطالة حسب الوسط والجنس والفئة العمرية",
+    "frenchTitle": "Taux de chômage selon le Milieu, le sexe et le groupe d’âges",
+    "description": "",
+    "domain": "test",
+    "unit": "POURCENTAGE",
+    "frequency": "AS",
+    "source": "MAR_HCP Enquête nationale sur l’emploi",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I4001"
+  },
+  {
+    "id": "I40",
+    "arabicTitle": "معدل النشاط الصافي",
+    "frenchTitle": "Taux net d’activité",
+    "description": "",
+    "domain": "test",
+    "unit": "POURCENTAGE",
+    "frequency": "AS",
+    "source": "MAR_HCP Enquête nationale sur l’emploi",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/I40"
+  },
+  {
+    "id": "IMT_TXEMP_02",
+    "arabicTitle": "معدل التشغيل حسب الأقاليم والوسط",
+    "frenchTitle": "Taux d’emploi selon les Provinces/Préfectures et le Milieu",
+    "description": "",
+    "domain": "test",
+    "unit": "POURCENTAGE",
+    "frequency": "AS",
+    "source": "MAR_HCP Enquête nationale sur l’emploi",
+    "apiUrl": "https://bds.hcp.ma/api/v1/indicators/IMT_TXEMP_02"
   }
 ]

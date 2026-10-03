@@ -1,6 +1,6 @@
 {
-  "code": "I3210",
-  "label": "Nombre des élèves dans l'enseignement primaire public",
+  "code": "I1594",
+  "label": "Population en âge d'activité",
   "periods": [
     "2021",
     "2022",
@@ -32,59 +32,59 @@
   ],
   "data": {
     "MTOT_2021": {
-      "value": "2212,15",
+      "value": "922,6",
       "footNote": null
     },
     "MURB_2021": {
-      "value": 2256.39,
+      "value": 941.05,
       "footNote": null
     },
     "MRUR_2021": {
-      "value": 2167.91,
+      "value": 904.15,
       "footNote": null
     },
     "MTOT_2022": {
-      "value": 2234.27,
+      "value": 931.83,
       "footNote": null
     },
     "MURB_2022": {
-      "value": 2278.51,
+      "value": 950.28,
       "footNote": null
     },
     "MRUR_2022": {
-      "value": 2190.03,
+      "value": 913.37,
       "footNote": null
     },
     "MTOT_2023": {
-      "value": 2256.39,
+      "value": 941.05,
       "footNote": null
     },
     "MURB_2023": {
-      "value": 2300.64,
+      "value": 959.5,
       "footNote": null
     },
     "MRUR_2023": {
-      "value": 2212.15,
+      "value": 922.6,
       "footNote": null
     },
     "MTOT_2024": {
-      "value": 2278.51,
+      "value": 950.28,
       "footNote": null
     },
     "MURB_2024": {
-      "value": 2322.76,
+      "value": 968.73,
       "footNote": null
     },
     "MRUR_2024": {
-      "value": 2234.27,
+      "value": 931.83,
       "footNote": null
     }
   },
   "metaData": {
-    "unit": "Nombre",
+    "unit": "En milliers",
     "frequency": "AS",
-    "source": "Ministère de l’Éducation nationale",
-    "definitionFr": "Définition de l'indicateur I3210.",
+    "source": "HCP-CERED",
+    "definitionFr": "Définition de l'indicateur I1594.",
     "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
     "footNotesFr": null
   }
