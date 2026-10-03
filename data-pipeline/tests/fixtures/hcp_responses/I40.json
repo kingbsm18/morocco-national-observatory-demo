@@ -1,6 +1,6 @@
 {
-  "code": "I3210",
-  "label": "Nombre des élèves dans l'enseignement primaire public",
+  "code": "I40",
+  "label": "Taux net d’activité",
   "periods": [
     "2021",
     "2022",
@@ -32,59 +32,59 @@
   ],
   "data": {
     "MTOT_2021": {
-      "value": "2212,15",
+      "value": "3014,0",
       "footNote": null
     },
     "MURB_2021": {
-      "value": 2256.39,
+      "value": 3074.28,
       "footNote": null
     },
     "MRUR_2021": {
-      "value": 2167.91,
+      "value": 2953.72,
       "footNote": null
     },
     "MTOT_2022": {
-      "value": 2234.27,
+      "value": 3044.14,
       "footNote": null
     },
     "MURB_2022": {
-      "value": 2278.51,
+      "value": 3104.42,
       "footNote": null
     },
     "MRUR_2022": {
-      "value": 2190.03,
+      "value": 2983.86,
       "footNote": null
     },
     "MTOT_2023": {
-      "value": 2256.39,
+      "value": 3074.28,
       "footNote": null
     },
     "MURB_2023": {
-      "value": 2300.64,
+      "value": 3134.56,
       "footNote": null
     },
     "MRUR_2023": {
-      "value": 2212.15,
+      "value": 3014.0,
       "footNote": null
     },
     "MTOT_2024": {
-      "value": 2278.51,
+      "value": 3104.42,
       "footNote": null
     },
     "MURB_2024": {
-      "value": 2322.76,
+      "value": 3164.7,
       "footNote": null
     },
     "MRUR_2024": {
-      "value": 2234.27,
+      "value": 3044.14,
       "footNote": null
     }
   },
   "metaData": {
-    "unit": "Nombre",
+    "unit": "POURCENTAGE",
     "frequency": "AS",
-    "source": "Ministère de l’Éducation nationale",
-    "definitionFr": "Définition de l'indicateur I3210.",
+    "source": "MAR_HCP Enquête nationale sur l’emploi",
+    "definitionFr": "Définition de l'indicateur I40.",
     "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
     "footNotesFr": null
   }

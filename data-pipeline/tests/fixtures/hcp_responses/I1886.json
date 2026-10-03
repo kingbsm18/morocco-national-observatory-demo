@@ -32,51 +32,51 @@
   ],
   "data": {
     "MTOT_2021": {
-      "value": "450000,0",
+      "value": "859,85",
       "footNote": null
     },
     "MURB_2021": {
-      "value": 450000.4,
+      "value": 877.05,
       "footNote": null
     },
     "MRUR_2021": {
-      "value": 449999.6,
+      "value": 842.65,
       "footNote": null
     },
     "MTOT_2022": {
-      "value": 454500.0,
+      "value": 868.45,
       "footNote": null
     },
     "MURB_2022": {
-      "value": 454500.4,
+      "value": 885.65,
       "footNote": null
     },
     "MRUR_2022": {
-      "value": 454499.6,
+      "value": 851.25,
       "footNote": null
     },
     "MTOT_2023": {
-      "value": 459000.0,
+      "value": 877.05,
       "footNote": null
     },
     "MURB_2023": {
-      "value": 459000.4,
+      "value": 894.24,
       "footNote": null
     },
     "MRUR_2023": {
-      "value": 458999.6,
+      "value": 859.85,
       "footNote": null
     },
     "MTOT_2024": {
-      "value": 463500.0,
+      "value": 885.65,
       "footNote": null
     },
     "MURB_2024": {
-      "value": 463500.4,
+      "value": 902.84,
       "footNote": null
     },
     "MRUR_2024": {
-      "value": 463499.6,
+      "value": 868.45,
       "footNote": null
     }
   },

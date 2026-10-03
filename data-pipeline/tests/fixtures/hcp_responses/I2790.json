@@ -32,58 +32,58 @@
   ],
   "data": {
     "MTOT_2021": {
-      "value": "63,5",
+      "value": "3837,31",
       "footNote": null
     },
     "MURB_2021": {
-      "value": 63.9,
+      "value": 3914.06,
       "footNote": null
     },
     "MRUR_2021": {
-      "value": 63.1,
+      "value": 3760.56,
       "footNote": null
     },
     "MTOT_2022": {
-      "value": 64.14,
+      "value": 3875.68,
       "footNote": null
     },
     "MURB_2022": {
-      "value": 64.54,
+      "value": 3952.43,
       "footNote": null
     },
     "MRUR_2022": {
-      "value": 63.74,
+      "value": 3798.94,
       "footNote": null
     },
     "MTOT_2023": {
-      "value": 64.77,
+      "value": 3914.06,
       "footNote": null
     },
     "MURB_2023": {
-      "value": 65.17,
+      "value": 3990.8,
       "footNote": null
     },
     "MRUR_2023": {
-      "value": 64.37,
+      "value": 3837.31,
       "footNote": null
     },
     "MTOT_2024": {
-      "value": 65.41,
+      "value": 3952.43,
       "footNote": null
     },
     "MURB_2024": {
-      "value": 65.81,
+      "value": 4029.18,
       "footNote": null
     },
     "MRUR_2024": {
-      "value": 65.0,
+      "value": 3875.68,
       "footNote": null
     }
   },
   "metaData": {
     "unit": "%",
     "frequency": "IR",
-    "source": "Recensement général de la population et de l'habitat",
+    "source": "Recensement général de la population et de l’habitat",
     "definitionFr": "Définition de l'indicateur I2790.",
     "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
     "footNotesFr": null

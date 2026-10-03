@@ -1,6 +1,6 @@
 {
-  "code": "I3210",
-  "label": "Nombre des élèves dans l'enseignement primaire public",
+  "code": "I1481",
+  "label": "Population selon les groupes d'âge et le sexe",
   "periods": [
     "2021",
     "2022",
@@ -32,59 +32,59 @@
   ],
   "data": {
     "MTOT_2021": {
-      "value": "2212,15",
+      "value": "888,02",
       "footNote": null
     },
     "MURB_2021": {
-      "value": 2256.39,
+      "value": 905.78,
       "footNote": null
     },
     "MRUR_2021": {
-      "value": 2167.91,
+      "value": 870.26,
       "footNote": null
     },
     "MTOT_2022": {
-      "value": 2234.27,
+      "value": 896.9,
       "footNote": null
     },
     "MURB_2022": {
-      "value": 2278.51,
+      "value": 914.66,
       "footNote": null
     },
     "MRUR_2022": {
-      "value": 2190.03,
+      "value": 879.14,
       "footNote": null
     },
     "MTOT_2023": {
-      "value": 2256.39,
+      "value": 905.78,
       "footNote": null
     },
     "MURB_2023": {
-      "value": 2300.64,
+      "value": 923.54,
       "footNote": null
     },
     "MRUR_2023": {
-      "value": 2212.15,
+      "value": 888.02,
       "footNote": null
     },
     "MTOT_2024": {
-      "value": 2278.51,
+      "value": 914.66,
       "footNote": null
     },
     "MURB_2024": {
-      "value": 2322.76,
+      "value": 932.42,
       "footNote": null
     },
     "MRUR_2024": {
-      "value": 2234.27,
+      "value": 896.9,
       "footNote": null
     }
   },
   "metaData": {
     "unit": "Nombre",
     "frequency": "AS",
-    "source": "Ministère de l’Éducation nationale",
-    "definitionFr": "Définition de l'indicateur I3210.",
+    "source": "Haut Commissariat au Plan",
+    "definitionFr": "Définition de l'indicateur I1481.",
     "methodOfCalculationFr": "Calcul selon la méthodologie HCP.",
     "footNotesFr": null
   }
